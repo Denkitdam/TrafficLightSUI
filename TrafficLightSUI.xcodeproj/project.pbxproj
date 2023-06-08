@@ -11,6 +11,7 @@
 		C8AF4D4F2A3232830039449E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF4D4E2A3232830039449E /* ContentView.swift */; };
 		C8AF4D512A3232840039449E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8AF4D502A3232840039449E /* Assets.xcassets */; };
 		C8AF4D542A3232840039449E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8AF4D532A3232840039449E /* Preview Assets.xcassets */; };
+		C8AF4D5B2A3232DF0039449E /* TrafficLightSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF4D5A2A3232DF0039449E /* TrafficLightSignal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C8AF4D4E2A3232830039449E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C8AF4D502A3232840039449E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8AF4D532A3232840039449E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C8AF4D5A2A3232DF0039449E /* TrafficLightSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightSignal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				C8AF4D4C2A3232830039449E /* TrafficLightSUIApp.swift */,
 				C8AF4D4E2A3232830039449E /* ContentView.swift */,
+				C8AF4D5A2A3232DF0039449E /* TrafficLightSignal.swift */,
 				C8AF4D502A3232840039449E /* Assets.xcassets */,
 				C8AF4D522A3232840039449E /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8AF4D4F2A3232830039449E /* ContentView.swift in Sources */,
+				C8AF4D5B2A3232DF0039449E /* TrafficLightSignal.swift in Sources */,
 				C8AF4D4D2A3232830039449E /* TrafficLightSUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
