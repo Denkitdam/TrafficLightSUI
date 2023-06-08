@@ -7,18 +7,31 @@
 
 import SwiftUI
 
+enum CurrentLight {
+    case red, yellow, green
+}
+
 struct ContentView: View {
-    @State private var tapCount = 0
+    @State var title = "Start"
+    @State private var currentLight = CurrentLight.red
+    
+    @State private var redLight = Color.red.opacity(0.1)
+    @State private var yellowLight = Color.yellow.opacity(0.1)
+    @State private var greenLight = Color.green.opacity(0.1)
+    
+    
+    
+    
     var body: some View {
         VStack {
             VStack {
-                TrafficLightSignal(color: .red)
-                TrafficLightSignal(color: .yellow)
-                TrafficLightSignal(color: .green)
+                TrafficLightSignal(color: redLight)
+                TrafficLightSignal(color: yellowLight)
+                TrafficLightSignal(color: greenLight)
             }
             Spacer()
             Button(action: changeColor) {
-                Text("Start")
+                Text(title)
                     .font(.title)
                     .padding()
                     .foregroundColor(.white)
@@ -32,7 +45,24 @@ struct ContentView: View {
     }
     
     private func changeColor() {
+        if title == "Start" {
+            title = "Next"
+        }
         
+        switch currentLight {
+        case .red:
+            redLight = Color.red.opacity(1)
+            greenLight = Color.green.opacity(0.1)
+            currentLight = .yellow
+        case .yellow:
+            redLight = Color.red.opacity(0.1)
+            yellowLight = Color.yellow.opacity(1)
+            currentLight = .green
+        case .green:
+            yellowLight = Color.yellow.opacity(0.1)
+            greenLight = Color.green.opacity(1)
+            currentLight = .red
+        }
     }
 }
 
