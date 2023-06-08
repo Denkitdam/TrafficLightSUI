@@ -14,7 +14,6 @@ struct TrafficLightSignal: View {
         Circle()
             .frame(width: 200, height: 200)
             .foregroundColor(color)
-            .opacity(0.3)
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
         
     }
