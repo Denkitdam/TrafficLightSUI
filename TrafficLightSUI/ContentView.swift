@@ -12,7 +12,6 @@ enum CurrentLight {
 }
 
 struct ContentView: View {
-    
     @State var title = "Start"
     @State private var currentLight = CurrentLight.red
     
