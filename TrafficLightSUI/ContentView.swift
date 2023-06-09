@@ -12,6 +12,7 @@ enum CurrentLight {
 }
 
 struct ContentView: View {
+    
     @State var title = "Start"
     @State private var currentLight = CurrentLight.red
     
@@ -19,7 +20,8 @@ struct ContentView: View {
     @State private var yellowLight = Color.yellow.opacity(0.1)
     @State private var greenLight = Color.green.opacity(0.1)
     
-    
+    private let lightOn = 1.0
+    private let lightOff = 0.1
     
     
     var body: some View {
@@ -51,16 +53,16 @@ struct ContentView: View {
         
         switch currentLight {
         case .red:
-            redLight = Color.red.opacity(1)
-            greenLight = Color.green.opacity(0.1)
+            redLight = Color.red.opacity(lightOn)
+            greenLight = Color.green.opacity(lightOff)
             currentLight = .yellow
         case .yellow:
-            redLight = Color.red.opacity(0.1)
-            yellowLight = Color.yellow.opacity(1)
+            redLight = Color.red.opacity(lightOff)
+            yellowLight = Color.yellow.opacity(lightOn)
             currentLight = .green
         case .green:
-            yellowLight = Color.yellow.opacity(0.1)
-            greenLight = Color.green.opacity(1)
+            yellowLight = Color.yellow.opacity(lightOff)
+            greenLight = Color.green.opacity(lightOn)
             currentLight = .red
         }
     }
