@@ -43,6 +43,7 @@ struct ContentView: View {
             
             
         }
+        .padding()
     }
     
     private func changeColor() {
