@@ -24,26 +24,29 @@ struct ContentView: View {
     
     
     var body: some View {
-        VStack {
+        ZStack {
+            Color.black.ignoresSafeArea()
             VStack {
-                TrafficLightSignal(color: redLight)
-                TrafficLightSignal(color: yellowLight)
-                TrafficLightSignal(color: greenLight)
+                VStack {
+                    TrafficLightSignal(color: redLight)
+                    TrafficLightSignal(color: yellowLight)
+                    TrafficLightSignal(color: greenLight)
+                }
+                Spacer()
+                Button(action: changeColor) {
+                    Text(title)
+                        .font(.title)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .clipShape(Capsule())
+                        .overlay(Capsule().stroke(Color.white, lineWidth: 4))
+                }
+                
+                
             }
-            Spacer()
-            Button(action: changeColor) {
-                Text(title)
-                    .font(.title)
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .clipShape(Capsule())
-                    .overlay(Capsule().stroke(Color.white, lineWidth: 4))
-            }
-            
-            
+            .padding()
         }
-        .padding()
     }
     
     private func changeColor() {
